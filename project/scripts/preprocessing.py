@@ -1,5 +1,6 @@
 import pandas as pd
 import glob
+from ast import literal_eval
 
 def count_hashtags(input_files: glob.glob) -> pd.DataFrame:
     """Returns the hashtag counts for every day in timeframe.
@@ -183,5 +184,5 @@ def get_edges_of_hashtags(input_files: glob.glob) -> pd.DataFrame:
             # save to output dataframe
             output = pd.concat([output, df_cleaned], axis=0, ignore_index=True)
         
-    output = output.groupby(['date', 'hashtag'], as_index=False).sum('count')
+    output = output.groupby(['source', 'target'], as_index=False).sum('weight')
     return output
