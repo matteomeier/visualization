@@ -105,9 +105,9 @@ def extract_mentions(entities: dict) -> list:
     """
     mentions = []
     if type(entities)==dict:
-        tag_dict = entities.get('mentions', {})
-        for item in tag_dict:
-            mention = item.get('text', {})
+        mention_dict = entities.get('user_mentions', {})
+        for item in mention_dict:
+            mention = item.get('screen_name', {})
             mentions.append(mention)
     return mentions
     
@@ -178,6 +178,71 @@ def get_edges_of_hashtags(input_files: glob.glob) -> pd.DataFrame:
             # 1. #cdu #spd 1
             # ...
             # 3. #spd #cdu 1 <- remove
+            # source: https://stackoverflow.com/questions/71548402/pandas-drop-row-if-another-row-has-the-same-values-but-the-columns-are-switche
+            df_cleaned = df_edges[~df_edges.apply(frozenset,axis=1).duplicated()]
+
+            # save to output dataframe
+            output = pd.concat([output, df_cleaned], axis=0, ignore_index=True)
+        
+    output = output.groupby(['source', 'target'], as_index=False).sum('weight')
+    return output
+
+def get_edges_of_mentions(input_files: glob.glob) -> pd.DataFrame:
+    """Returns the weighted edges of the given mentions.
+
+    Args:
+        input_files (glob.glob): Input file list with twitter chunks.
+
+    Returns:
+        pd.DataFrame: DataFrame with source mention, target mention and weight.
+    """
+    output = pd.DataFrame()
+
+    # iterate through files
+    for file in input_files:
+        with open(file, 'r') as f:
+            # read json to df
+            df = pd.read_json(f)
+
+            # apply function get mentions
+            df['mentions'] = df['entities'].apply(extract_mentions)
+
+            # drop tweets with no mentions
+            df_true = []
+            for ind in df.index:
+                if(len(df['mentions'][ind])==0):
+                    df_true.append(False)
+                else:
+                    df_true.append(True)
+            df = df[df_true]
+
+            # lower all mentions
+            for ind in df.index:
+                df['mentions'][ind] = [mention.lower() for mention in df['mentions'][ind]]
+
+            # create edges for network (pair mentions together)
+            df['mentions'] = df['mentions'].apply(lambda x: str(x).lower())
+
+            # create empty dataframe
+            df_edges = pd.DataFrame(columns=['source', 'target'])
+
+            # add each possible edge to the dataframe
+            for ind in df.index:
+                mentions = literal_eval(df['mentions'][ind])
+                for source_mention in mentions:
+                    target_mentions = mentions.copy()
+                    target_mentions.remove(source_mention)                  
+                    for target_mention in target_mentions:                        
+                        df_edges = df_edges.append({"source": source_mention, "target": target_mention}, ignore_index=True)                        
+
+            # aggregate dfs and groupby mentions (below called "source")
+            # columns: source, target, weight
+            df_edges[['source', 'target', 'weight']] = df_edges.groupby(['source', 'target'],as_index=False).size()        
+
+            # drop 'nan' since dataframe retained original shape and filled it with 'nan' values
+            df_edges = df_edges.dropna()
+
+            # remove reversed entries
             # source: https://stackoverflow.com/questions/71548402/pandas-drop-row-if-another-row-has-the-same-values-but-the-columns-are-switche
             df_cleaned = df_edges[~df_edges.apply(frozenset,axis=1).duplicated()]
 
