@@ -1,5 +1,10 @@
 import pandas as pd
 import glob
+from nltk.corpus import stopwords
+from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
+import json
+import re
+import numpy as np
 from ast import literal_eval
 
 def count_hashtags(input_files: glob.glob) -> pd.DataFrame:
@@ -105,18 +110,76 @@ def extract_mentions(entities: dict) -> list:
     """
     mentions = []
     if type(entities)==dict:
-        mention_dict = entities.get('user_mentions', {})
-        for item in mention_dict:
+        tag_dict = entities.get('user_mentions', {})
+        for item in tag_dict:
             mention = item.get('screen_name', {})
             mentions.append(mention)
     return mentions
-    
-def get_edges_of_hashtags(input_files: glob.glob) -> pd.DataFrame:
-    """Returns the weighted edges of the given hashtags.
+
+def get_politician_tweets(input_files: glob.glob, accounts_file: glob.glob) -> pd.DataFrame:
+    """Filters the tweets for the defined politicians accounts.
+    Returns date, text, politician and party.
 
     Args:
         input_files (glob.glob): Input file list with twitter chunks.
+        accounts_file (glob.glob): Input file for defined accounts.
 
+    Returns:
+        pd.DataFrame: DataFrame with date, text, politician and party.
+    """
+    # get accounts
+    for file in accounts_file:
+        with open(file, 'r', encoding='utf-8') as f:
+            accounts = json.load(f)
+
+    accounts_list = []
+    for party in accounts:
+        for account in accounts[party]:
+            accounts_list.append(account)
+
+    user_output = []
+    text_output = []
+    date_output = []
+    party_output = []
+
+    output = pd.DataFrame()
+
+    # iterate through files
+    for file in input_files:
+        with open(file, 'r') as f:
+            # read json to df
+            tweets = json.load(f)
+            for tweet in tweets:
+                if tweet.get('user') is not None:
+                    user = tweet['user'].get('screen_name') 
+                    if user in accounts_list:
+                        # get only tweets which are no retweets
+                        if tweet.get('retweeted_status') is None:
+                        
+                            if tweet.get('ext_tweet') is None or tweet.get('ext_tweet') == '':
+                                if tweet.get('text') is None:
+                                    text = ''
+                                else:
+                                    text = tweet['text']
+                            else:
+                                text = tweet['ext_tweet'].get('full_text')
+                            date = pd.to_datetime(tweet.get('created_at'))
+                            user_output.append(user)
+                            text_output.append(text)
+                            date_output.append(date)
+
+    for i in range(len(user_output)):
+        for party, account in accounts.items():
+            if user_output[i] in account:
+                party_output.append(party)
+    output = {'user': user_output, 'text': text_output, 'date': date_output, 'party': party_output}
+    output = pd.DataFrame(output)
+    return output
+    
+def get_edges_of_hashtags(input_files: glob.glob) -> pd.DataFrame:
+    """Returns the weighted edges of the given hashtags.
+    Args:
+        input_files (glob.glob): Input file list with twitter chunks.
     Returns:
         pd.DataFrame: DataFrame with source hashtag, target hashtag and weight.
     """
@@ -189,10 +252,8 @@ def get_edges_of_hashtags(input_files: glob.glob) -> pd.DataFrame:
 
 def get_edges_of_mentions(input_files: glob.glob) -> pd.DataFrame:
     """Returns the weighted edges of the given mentions.
-
     Args:
         input_files (glob.glob): Input file list with twitter chunks.
-
     Returns:
         pd.DataFrame: DataFrame with source mention, target mention and weight.
     """
