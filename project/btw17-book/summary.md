@@ -6,6 +6,12 @@ On our last note, we want to encourage you as the viewer to find your own and po
 
 
 # Literature
-
-```{bibliography}
-```
+[1] Executable Books Community (2020): Jupyter Book: Zenodo.
+[2] Kratzke, Nane (2017): The #BTW17 Twitter Dataset - Recorded Tweets of the Federal Election Campaigns of 2017 for the 19th German Bundestag: Zenodo.
+[3] Kratzke, Nane (2017): The #BTW17 Twitter Dataset–Recorded Tweets of the Federal Election Campaigns of 2017 for the 19th German Bundestag. In: Data 2 (4), S. 34. DOI: 10.3390/data2040034.
+[4] Der Bundeswahlleiter (2022): Ergebnisse - Der Bundeswahlleiter. Online verfügbar unter https://bundeswahlleiter.de/bundestagswahlen/2017/ergebnisse.html, date of last access: 01.07.2022.
+[5] Der Bundeswahlleiter (2022): Downloads - Der Bundeswahlleiter. Online verfügbar unter https://bundeswahlleiter.de/bundestagswahlen/2017/wahlkreiseinteilung/downloads.html, date of last access:  08.07.2022.
+[6] Wikipedia (2022): Zipfsches Gesetz ‐- Wikipedia, The Free Encyclopedia.
+[7] Marietta Gädeke (2017): #btw17 | Twitter – Wahlkampf in 140 Zeichen. Online verfügbar unter https://www.lilit-kommunikation.de/btw17-twitter-wahlkampf-140-zeichen-lilit/, date of last access: 12.07.2022.
+[8] Wikipedia (2022): Tf–idf ‐- Wikipedia, The Free Encyclopedia.
+[9] Walsh, Melanie (2021): Introduction to Cultural Analytics & Python: Zenodo.
