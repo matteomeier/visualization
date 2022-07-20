@@ -15,3 +15,4 @@ On our last note, we want to encourage you as the viewer to find your own and po
 [7] Marietta Gädeke (2017): #btw17 | Twitter – Wahlkampf in 140 Zeichen. Online verfügbar unter https://www.lilit-kommunikation.de/btw17-twitter-wahlkampf-140-zeichen-lilit/, date of last access: 12.07.2022.
 [8] Wikipedia (2022): Tf–idf ‐- Wikipedia, The Free Encyclopedia.
 [9] Walsh, Melanie (2021): Introduction to Cultural Analytics & Python: Zenodo.
+[10] Guhr, Oliver  and  Schumann, Anne-Kathrin  and  Bahrmann, Frank  and  Böhme, Hans Joachim (2020): Training a Broad-Coverage German Sentiment Classification Model for Dialog Systems. In: Proceedings of The 12th Language Resources and Evaluation Conference, S. 1620-1625. Online verfügbar unter https://www.aclweb.org/anthology/2020.lrec-1.202, date of last access: 20.07.2022
