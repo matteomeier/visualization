@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -36,6 +36,7 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -54,10 +55,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Topics in the #BTW17 Dataset" href="topics.html" />
-    <link rel="prev" title="The #BTW17-Dataset" href="startpage.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -94,17 +93,34 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="startpage.html">
-   The #BTW17-Dataset
+  <a class="reference internal" href="introduction.html">
+   Introduction
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   The BTW17 Election
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Election results
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="election.html">
+   The federal election 2017
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="regional.html">
+   Regional election results
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Analysis of the tweets
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="topics.html">
    Topics in the #BTW17 Dataset
@@ -112,12 +128,24 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="sentiment.html">
-   Sentiment in the #BTW17 Dataset
+   Sentiment in the #BTW17-Dataset
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="network.html">
    Networks in BTW17-Dataset
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Summary
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="summary.html">
+   Summary
   </a>
  </li>
 </ul>
@@ -172,22 +200,6 @@ const thebe_selector_output = ".output, .cell_output"
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbtw17.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -221,7 +233,7 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="the-btw17-election">
-<h1>The BTW17 Election<a class="headerlink" href="#the-btw17-election" title="Permalink to this headline">¶</a></h1>
+<h1>The BTW17 Election<a class="headerlink" href="#the-btw17-election" title="Permalink to this heading">¶</a></h1>
 <p>Maybe it’s a good framing for the topic.
 Maybe not necessary but i think this could result in nice plots (geoplots and distribution of parlament and stuff). Just some basic plots for the outcome of the election:</p>
 <ul class="simple">
@@ -255,21 +267,7 @@ Maybe not necessary but i think this could result in nice plots (geoplots and di
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="startpage.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">The #BTW17-Dataset</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="topics.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Topics in the #BTW17 Dataset</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>

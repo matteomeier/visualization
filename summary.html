@@ -55,7 +55,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Interactive Network Visualization" href="network.html" />
+    <link rel="prev" title="Networks in BTW17-Dataset" href="network.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -129,12 +129,12 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="sentiment.html">
-   Sentiment in the #BTW17 Dataset
+   Sentiment in the #BTW17-Dataset
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="network.html">
-   Interactive Network Visualization
+   Networks in BTW17-Dataset
   </a>
  </li>
 </ul>
@@ -271,12 +271,25 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="summary">
 <h1>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">¶</a></h1>
-<p>On this page, we will add a summary and conclusion of the key take aways of our analysis.
-Also, you find the literature we used to create this jupyter book.</p>
+<p>On the previous pages we analyzed the #btw17-dataset with respect to its topics, the sentiment as well as some basic network analysis. Our aim was to present an insight into the dynamics of Twitter usage during the 2017 federal election campaign. Our main results include the <em>AfD</em> as the domination party in our dataset, even though the number of <em>AfD</em> politicans, that where followed, was small in comparison to other parties. This results in the strong hypothesis, that the <em>AfD</em> and its supporters are in general very dominant on Twitter. As pointed out in the topics and sentiment chapter, also Twitter users, who are not supporters, but critically discuss the <em>AfD</em> might have impacted this dominance.</p>
+<p>As another main results we were also able to identify important events during the election campaign, which include the g20 summit in Hamburg as well as the passing of a law allowing same-sex marriage and the TV Duell. All of these events could already be inferred from the tweet and thread distribution over time and backed up by the hashtag analysis. Additionally the topic analysis yielded some more topics, like social justice. The network analysis allowed us additionally to our topic analysis to identify topics, that were present throughout part or the whole election campaign without having a short time, where they were intensely discussed. Based on our sentiment analysis we concluded, that especially <em>Die Grünen</em> and <em>Die Linken</em> tend to write more critically, which is not surprising given that they were in the opposition in the parliament during that time. This thesis got backed up by the average sentiment of tweets posted by <em>CDU/CSU</em> and <em>SPD</em> politicians being higher. We could also prove, that the different parties tend to form clusters and thus interactions between members of the same party are for most parties common. For <em>SPD</em> and <em>CDU/CSU</em> this cannot be seen as clearly as for the other parties we looked at.</p>
+<p>Since the context of the #btw17-dataset is the federal election, we started our analysis by visualizing the election results. If we would have ignored this context, it would now be more difficult to identify the meaning of what we have analyzed. For example, a viewer unfamiliar with German politics might think, that the <em>AfD</em> is bigger and had a higher impact than it actually had at that time (based on the influence in the parliament). When combining the election results with our data analysis we can infer multiple things. As mentioned already, the strength of the <em>AfD</em> on Twitter does not hold true for the election overall, even though it might be true for some regions of Germany as depicted by the constituency maps. Furthermore, the <em>CDU</em> and <em>CSU</em> are based on our analysis not very active on Twitter, but still they won the election. This shows that the tweets and the network they create are not suited to represent the dynamics of the election campaign and the election outcome itself. This is not surprising given, that for example for the <em>CDU</em> we saw, that they got more votes in older age groups and a common understanding is, that Twitter users are usually younger. Based on the different voting behaviors we identified for different age groups, we obtain another argument for tweets and twitter in general not being suited to predict election results. Another factor, that has an implicit influence is the age of the elected members of parliament. We were able to see clear differences in the age structures, which could also influence their twitter usage (both the extent to which they use it as well as how they use it). Unfortunately, we do not have data from twitter or the #btw17-dataset to show the age of the users, since it is not mandatory to give this information when creating an account, but we have a strong hypothesis, that the age structure of the dataset is not representative of the age structure of Germany as a whole. Lastly, we also showed, that there are some tendencies in regional differences when it comes to favored party.</p>
+<p>All in all, the voting decision is influenced by many aspects and the analysis of the #btw17-dataset is especially helpful for understanding the role social media can play in election campaigns, but it is not suited for predicting results. However, we have to note, that since 2017 the role and use of social media for politics and politicians might have increased.</p>
+<p>On our last note, we want to encourage you as the viewer to find your own and possibly further interpretations and more importantly to critically reflect what we presented you here.</p>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="literature">
 <h1>Literature<a class="headerlink" href="#literature" title="Permalink to this heading">¶</a></h1>
-<span class="target" id="id1"></span></div>
+<p>[1] Executable Books Community (2020): Jupyter Book: Zenodo. <br>
+[2] Kratzke, Nane (2017): The #BTW17 Twitter Dataset - Recorded Tweets of the Federal Election Campaigns of 2017 for the 19th German Bundestag: Zenodo. <br>
+[3] Kratzke, Nane (2017): The #BTW17 Twitter Dataset–Recorded Tweets of the Federal Election Campaigns of 2017 for the 19th German Bundestag. In: Data 2 (4), S. 34. DOI: 10.3390/data2040034. <br>
+[4] Der Bundeswahlleiter (2022): Ergebnisse - Der Bundeswahlleiter. Online available at https://bundeswahlleiter.de/bundestagswahlen/2017/ergebnisse.html, date of last access: 01.07.2022. <br>
+[5] Der Bundeswahlleiter (2022): Downloads - Der Bundeswahlleiter. Online available at https://bundeswahlleiter.de/bundestagswahlen/2017/wahlkreiseinteilung/downloads.html, date of last access:  08.07.2022. <br>
+[6] Wikipedia (2022): Zipfsches Gesetz ‐- Wikipedia, The Free Encyclopedia.
+[7] Marietta Gädeke (2017): #btw17 | Twitter – Wahlkampf in 140 Zeichen. Online available at https://www.lilit-kommunikation.de/btw17-twitter-wahlkampf-140-zeichen-lilit/, date of last access: 12.07.2022. <br>
+[8] Wikipedia (2022): Tf–idf ‐- Wikipedia, The Free Encyclopedia. <br>
+[9] Walsh, Melanie (2021): Introduction to Cultural Analytics &amp; Python: Zenodo. <br>
+[10] Guhr, Oliver  and  Schumann, Anne-Kathrin  and  Bahrmann, Frank  and  Böhme, Hans Joachim (2020): Training a Broad-Coverage German Sentiment Classification Model for Dialog Systems. In: Proceedings of The 12th Language Resources and Evaluation Conference, S. 1620-1625. Online available at https://www.aclweb.org/anthology/2020.lrec-1.202, date of last access: 20.07.2022. <br></p>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -307,7 +320,7 @@ Also, you find the literature we used to create this jupyter book.</p>
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Interactive Network Visualization</p>
+            <p class="prev-next-title">Networks in BTW17-Dataset</p>
         </div>
     </a>
 </div>
