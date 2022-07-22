@@ -11,13 +11,13 @@ On our last note, we want to encourage you as the viewer to find your own and po
 
 
 # Literature
-[1] Executable Books Community (2020): Jupyter Book: Zenodo.
-[2] Kratzke, Nane (2017): The #BTW17 Twitter Dataset - Recorded Tweets of the Federal Election Campaigns of 2017 for the 19th German Bundestag: Zenodo.
-[3] Kratzke, Nane (2017): The #BTW17 Twitter Dataset–Recorded Tweets of the Federal Election Campaigns of 2017 for the 19th German Bundestag. In: Data 2 (4), S. 34. DOI: 10.3390/data2040034.
-[4] Der Bundeswahlleiter (2022): Ergebnisse - Der Bundeswahlleiter. Online available at https://bundeswahlleiter.de/bundestagswahlen/2017/ergebnisse.html, date of last access: 01.07.2022.
-[5] Der Bundeswahlleiter (2022): Downloads - Der Bundeswahlleiter. Online available at https://bundeswahlleiter.de/bundestagswahlen/2017/wahlkreiseinteilung/downloads.html, date of last access:  08.07.2022.
+[1] Executable Books Community (2020): Jupyter Book: Zenodo. <br>
+[2] Kratzke, Nane (2017): The #BTW17 Twitter Dataset - Recorded Tweets of the Federal Election Campaigns of 2017 for the 19th German Bundestag: Zenodo. <br>
+[3] Kratzke, Nane (2017): The #BTW17 Twitter Dataset–Recorded Tweets of the Federal Election Campaigns of 2017 for the 19th German Bundestag. In: Data 2 (4), S. 34. DOI: 10.3390/data2040034. <br>
+[4] Der Bundeswahlleiter (2022): Ergebnisse - Der Bundeswahlleiter. Online available at https://bundeswahlleiter.de/bundestagswahlen/2017/ergebnisse.html, date of last access: 01.07.2022. <br> 
+[5] Der Bundeswahlleiter (2022): Downloads - Der Bundeswahlleiter. Online available at https://bundeswahlleiter.de/bundestagswahlen/2017/wahlkreiseinteilung/downloads.html, date of last access:  08.07.2022. <br>
 [6] Wikipedia (2022): Zipfsches Gesetz ‐- Wikipedia, The Free Encyclopedia.
-[7] Marietta Gädeke (2017): #btw17 | Twitter – Wahlkampf in 140 Zeichen. Online available at https://www.lilit-kommunikation.de/btw17-twitter-wahlkampf-140-zeichen-lilit/, date of last access: 12.07.2022.
-[8] Wikipedia (2022): Tf–idf ‐- Wikipedia, The Free Encyclopedia.
-[9] Walsh, Melanie (2021): Introduction to Cultural Analytics & Python: Zenodo.
-[10] Guhr, Oliver  and  Schumann, Anne-Kathrin  and  Bahrmann, Frank  and  Böhme, Hans Joachim (2020): Training a Broad-Coverage German Sentiment Classification Model for Dialog Systems. In: Proceedings of The 12th Language Resources and Evaluation Conference, S. 1620-1625. Online available at https://www.aclweb.org/anthology/2020.lrec-1.202, date of last access: 20.07.2022
+[7] Marietta Gädeke (2017): #btw17 | Twitter – Wahlkampf in 140 Zeichen. Online available at https://www.lilit-kommunikation.de/btw17-twitter-wahlkampf-140-zeichen-lilit/, date of last access: 12.07.2022. <br>
+[8] Wikipedia (2022): Tf–idf ‐- Wikipedia, The Free Encyclopedia. <br>
+[9] Walsh, Melanie (2021): Introduction to Cultural Analytics & Python: Zenodo. <br>
+[10] Guhr, Oliver  and  Schumann, Anne-Kathrin  and  Bahrmann, Frank  and  Böhme, Hans Joachim (2020): Training a Broad-Coverage German Sentiment Classification Model for Dialog Systems. In: Proceedings of The 12th Language Resources and Evaluation Conference, S. 1620-1625. Online available at https://www.aclweb.org/anthology/2020.lrec-1.202, date of last access: 20.07.2022. <br>
